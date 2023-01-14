@@ -47,7 +47,7 @@ const Ceremony = () => {
         <h3>{t("churchCeremonyStart")}</h3>
         <p>{t("churchName")}</p>
         <p>{t("churchAddress")}</p>
-        <div className="map">
+        <div className="map mapCeremony">
           <a
             className="link"
             target="_blank"
