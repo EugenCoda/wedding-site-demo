@@ -1,0 +1,36 @@
+.photoCarousel {
+  padding: 0;
+  height: 600px;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 66%;
+  z-index: 20;
+  color: var(--secondary-headings-color);
+  font-size: 5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
+.weddingCarousel {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center 75%;
+}
+
+@media only screen and (max-width: 780px) {
+  .title {
+    font-size: 3rem;
+    top: 85%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 2.5rem;
+    top: 80%;
+  }
+}

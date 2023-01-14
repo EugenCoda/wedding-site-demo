@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --main-theme-color: #cb9286;
+  --main-theme-color-overlay: #cb9286;
+  --main-bg-color: #faf4f3;
+  --overlay: rgba(128, 91, 84, 0.5);
+  --secondary-bg-color: white;
+  --main-headings-color: #1c1c1c;
+  --secondary-headings-color: rgb(255, 255, 255);
+  --secondary-headings-color-hover: rgb(255, 255, 255);
+  --main-text-color: rgb(88 86 86 / 90%);
+  --link-color: #51b0b3;
+  --form-input-bottom-border: #ccc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif", serif;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 48px;
+  line-height: 1.2em;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-style: normal;
+  margin-top: 50px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2,
+h3 {
+  margin-bottom: 20px;
+  color: var(--main-headings-color);
+}
+
+p,
+span,
+label {
+  color: var(--main-text-color);
+  font-size: 16px;
+  line-height: 1.6em;
+  letter-spacing: 0.6px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.map {
+  margin-top: 10px;
+}
+
+.link,
+.link:visited {
+  color: var(--link-color);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 1px;
+  padding: 2px;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: none;
+  color: var(--main-theme-color);
+  outline-color: var(--main-theme-color);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  height: auto;
+  min-height: 500px;
+  width: 100%;
+  max-width: 100%;
+  padding: 80px 0;
+}
+
+.date,
+.reception,
+.tips {
+  background-color: var(--secondary-bg-color);
+}
+
+/* For setting open box with position absolute */
+.tips {
+  position: relative;
+}
+
+.ceremony,
+.rsvp {
+  background-color: var(--main-bg-color);
+}
+
+.layer {
+  border-radius: 50%;
+  background-color: var(--overlay);
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  width: 450px;
+  height: 450px;
+  position: relative;
+}
+
+.layerCarousel {
+  background-color: var(--overlay);
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photo {
+  object-fit: cover;
+  border-radius: 50%;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.photoCreditBox {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  background-color: transparent;
+}
+
+.carousel {
+  background-color: var(--main-bg-color);
+}
+
+.photoCredit {
+  font-size: 0.8rem;
+  padding: 2px;
+}
+
+/* Mobile view */
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    margin-top: 40px;
+    font-size: 36px;
+  }
+
+  .card {
+    padding: 50px 0;
+  }
+
+  .tips {
+    padding: 10px 0;
+  }
+
+  .rsvp {
+    padding: 30px 0;
+  }
+
+  .layer {
+    width: 90vw;
+    height: 90vw;
+  }
+}

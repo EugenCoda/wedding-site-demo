@@ -1,0 +1,54 @@
+.ceremonyWrapper {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.churchCeremonyCard,
+.civilCeremonyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.churchCeremonyImage,
+.civilCeremonyImage {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile view */
+
+@media only screen and (max-width: 980px) {
+  .ceremonyWrapper {
+    flex-direction: column;
+  }
+
+  .churchCeremonyCard,
+  .civilCeremonyCard {
+    width: 100%;
+  }
+
+  .churchCeremonyImage,
+  .civilCeremonyImage {
+    width: 450px;
+    height: 450px;
+  }
+
+  .churchCeremonyImage {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .churchCeremonyImage,
+  .civilCeremonyImage {
+    width: 90vw;
+    height: 90vw;
+  }
+}

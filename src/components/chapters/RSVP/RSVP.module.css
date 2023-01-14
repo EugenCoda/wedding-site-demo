@@ -1,0 +1,213 @@
+.formBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+.formBox p {
+  font-size: 14px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.formControl {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.formControl input,
+.formControl textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  font: inherit;
+  border: 2px solid var(--form-input-bottom-border);
+  padding: 14px;
+}
+
+.formControl input:focus,
+.formControl textarea:focus {
+  outline: none;
+  border-color: var(--main-theme-color);
+}
+
+.formControl textarea {
+  resize: none;
+}
+
+.buttonsContainer {
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: var(--main-theme-color);
+  border: 2px solid var(--main-theme-color);
+  color: var(--secondary-headings-color);
+  padding: 12px 25px;
+  width: 225px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0px 5px 15px 2px rgb(0 0 0 / 10%);
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  outline: none;
+  transition: background-color 0.4s ease 0s, border-color 0.4s ease 0s;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--main-bg-color);
+  color: var(--main-theme-color);
+  border: 2px solid var(--main-theme-color);
+}
+
+.btnDisabled {
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-theme-color);
+  color: var(--main-theme-color);
+}
+
+.btnSecondary:hover,
+.btnSecondary:focus {
+  background-color: var(--main-theme-color);
+  color: var(--secondary-headings-color);
+  border: 2px solid var(--main-theme-color);
+}
+
+.confirmationMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+}
+
+.addGuestBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.deleteIcon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--main-theme-color);
+  position: absolute;
+  right: 1%;
+  top: 15%;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.stuffNeededContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* STUFF NEEDED CHECKBOX */
+/* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+
+/* Customize the label (the container) */
+.stuffNeededCheckboxContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+}
+
+/* Hide the browser's default checkbox */
+.stuffNeededCheckboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.stuffNeededCheckmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: 2px solid var(--main-theme-color);
+}
+
+/* On mouse-over, add a grey background color */
+.stuffNeededCheckboxContainer:hover input ~ .stuffNeededCheckmark {
+  background-color: var(--form-input-bottom-border);
+}
+
+/* When the checkbox is checked, add background color*/
+.stuffNeededCheckboxContainer input:checked ~ .stuffNeededCheckmark {
+  border: none;
+  background-color: var(--main-theme-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.stuffNeededCheckmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.stuffNeededCheckboxContainer input:checked ~ .stuffNeededCheckmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.stuffNeededCheckboxContainer .stuffNeededCheckmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Mobile view */
+
+@media only screen and (max-width: 780px) {
+  .btn {
+    margin-top: 10px;
+    padding: 12px;
+    width: 160px;
+    font-size: 12px;
+  }
+}
